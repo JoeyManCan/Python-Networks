@@ -23,7 +23,7 @@ def change_mac_address(interface_value, new_mac, shell=True):
     subprocess.call(["ifconfig", f"{interface_value}"])
 
 
-values = get_command_line_parameters()
-interface = values.interface
-mac_address = values.mac_address
+parameters = get_command_line_parameters()
+interface = parameters.interface
+mac_address = parameters.mac_address
 change_mac_address(interface, mac_address)
